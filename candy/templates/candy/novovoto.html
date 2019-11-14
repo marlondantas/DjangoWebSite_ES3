@@ -1,0 +1,81 @@
+{% extends 'candy/main.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Pesquisa de interesse
+{% endblock %}
+
+{% block subtitulo %}
+    Entre com seu Email e vote no seu favorito!
+{% endblock %}
+
+{% block doce %}
+    <div class="card mb-4 shadow-sm">
+
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">DOCE</h4>
+          </div>
+
+          <div class="card-body">
+
+            <ul class="list-unstyled mt-3 mb-4">
+
+              <li>
+                <img src="{% static 'icon/brigadeiro.png' %}" alt="DOCE brigadeiro" class="img-thumbnail">
+              </li>
+
+            </ul>
+
+{#            <h4  class="card-title pricing-card-title"><input type="email" placeholder="Email" name="email" required></h4>#}
+
+
+
+            <a href="{% url 'CANDY:voto_on' date='DC' %}" type="button" class="btn btn-lg btn-block btn-primary">VOTE</a>
+
+          </div>
+        </div>
+{% endblock %}
+
+{% block ranking %}
+{#    <div class="card mb-4 shadow-sm">#}
+{##}
+{#          <div class="card-header">#}
+{#            <h4 class="my-0 font-weight-normal">RANKING</h4>#}
+{#          </div>#}
+{##}
+{#          <div class="card-body">#}
+{##}
+{#            <div class="list-unstyled mt-3 mb-4">#}
+{##}
+{#            <a href="{% url 'CANDY:voto_on' %}" type="button" class="btn btn-lg btn-block btn-outline-primary ">MOSTAR</a>#}
+{##}
+{#            </div>#}
+{#          </div>#}
+{#    </div>#}
+{% endblock %}
+
+{% block salgado %}
+            <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Salgado</h4>
+          </div>
+          <div class="card-body">
+
+            <ul class="list-unstyled mt-3 mb-4">
+
+              <li>
+                <img src="{% static 'icon/coxinha.png' %}" alt="SALGADO Coxinha" class="img-thumbnail">
+              </li>
+
+            </ul>
+
+{#            <h4  class="card-title pricing-card-title"><input type="email" placeholder="Email" name="email" required></h4>#}
+
+
+
+            <a href="{% url 'CANDY:voto_on' date='SL' %}" type="button" class="btn btn-lg btn-block btn-primary">VOTE</a>
+
+          </div>
+        </div>
+{% endblock %}
